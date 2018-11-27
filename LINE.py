@@ -1,6 +1,7 @@
 #直线检测
 #使用霍夫直线变换做直线检测，前提条件：边缘检测已经完成
 import cv2 as cv
+import os
 import numpy as np
 from pylab import  *
 from PIL import  Image
@@ -14,10 +15,10 @@ def line_detect_possible(image,minLength=60,maxGap=5):
     lines = cv.HoughLinesP(edges, 1, np.pi / 180, 60, minLineLength=minLength, maxLineGap=maxGap)
     for line in lines:
         x1, y1, x2, y2 = line[0]
-        cv.line(image, (x1, y1), (x2, y2), (0, 255,0), 2)
+        cv.line(image, (x1, y1), (x2, y2), (0, 255,0), 1)
     return image,lines
 def oncallback1(x):
-    image1 = readImage('./result.jpg')
+    image1 = readImage('./result/1_processed_black_less.jpg')
     filename = "image1_lines_output"
     minLineLength=cv.getTrackbarPos('minLineLength','image1_HoughLine and save')
     maxLineGap=cv.getTrackbarPos("maxLineGap",'image1_HoughLine and save')
@@ -25,12 +26,12 @@ def oncallback1(x):
     image,lines=line_detect_possible(image1,minLineLength,maxLineGap )
     if save==1:
         linesave(lines,filename)
-        imsave("result_line.jpg",image)
+        imsave("./result/result1_line.jpg",image)
     imshow(image)
     show()
 
 def oncallback2(x):
-    image2 = readImage('./result2.jpg')
+    image2 = readImage('./result/7_processed_black_less.jpg')
     filename="image2_lines_output"
     minLineLength=cv.getTrackbarPos('minLineLength','image2_HoughLine and save')
     maxLineGap=cv.getTrackbarPos("maxLineGap",'image2_HoughLine and save')
@@ -38,7 +39,7 @@ def oncallback2(x):
     image,lines=line_detect_possible(image2,minLineLength,maxLineGap )
     if save==1:
         linesave(lines,filename)
-        imsave("result2_line.jpg",image)
+        imsave("./result/result2_line.jpg",image)
     imshow(image)
     show()
 def linesave(lines,filename):

@@ -59,8 +59,8 @@ def minPictureResize(im,times,basePoint):
     return (x1,y1,im)
 
 if __name__ == '__main__':
-    image1=readImage('./result_line.jpg')
-    image2=readImage('./result2_line.jpg')
+    image1=readImage('./result/result1_line.jpg')
+    image2=readImage('./result/result2_line.jpg')
     #linelist,i=readData('./cmpResult')
     linelist, i = readData('./modifyResult')
     print(linelist)
@@ -85,15 +85,15 @@ if __name__ == '__main__':
         result_im1[int(x_1[1]):int(x_3[1]), int(x_1[0]):int(x_2[0])] = image1
         result_im2[int(y_1[1]):int(y_3[1]), int(y_1[0]):int(y_2[0])] = im2
         imshow(result_im1)
-        imsave('./result_im1.jpg', result_im1)
+        imsave('./result/result_im1.jpg', result_im1)
         show()
         imshow(result_im2)
-        imsave('./result_im2.jpg', result_im2)
+        imsave('./result/result_im2.jpg', result_im2)
         show()
 
         result_im = cv2.addWeighted(result_im1, 0.5, result_im2, 0.5, 0)
         imshow(result_im)
-        imsave('result_im', result_im)
+        imsave('./result/result_im', result_im)
         show()
     else:
         print("PART B")
@@ -109,14 +109,14 @@ if __name__ == '__main__':
         result_im1[int(x_1[1]):int(x_3[1]), int(x_1[0]):int(x_2[0])] = image2
         result_im2[int(y_1[1]):int(y_3[1]), int(y_1[0]):int(y_2[0])] = im2
         imshow(result_im1)
-        imsave('./result_im1.jpg', result_im1)
+        imsave('./result/result_im1.jpg', result_im1)
         show()
         imshow(result_im2)
-        imsave('./result_im2.jpg', result_im2)
+        imsave('./result/result_im2.jpg', result_im2)
         show()
         result_im = cv2.addWeighted(result_im1, 0.5,result_im2, 0.5, 0)
         imshow(result_im)
-        imsave('result_im',result_im)
+        imsave('./result/result_im',result_im)
         show()
 
 

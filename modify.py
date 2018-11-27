@@ -9,10 +9,14 @@ if __name__ == '__main__':
     x2,y2=point2
     x3,y3=point3
     x4,y4=point4
+    x1=int(x1/4+3*x2/4)
+    y1=int(3*y1/4+y2/4)
+    x3 = int(x3/ 4 + 3 * x4 / 4)
+    y3 = int(3 * y3 / 4 + y4 / 4)
     angle1=math.atan(abs((y1-y2)/(x1-x2)))
     angle2=math.atan(abs((y3-y4)/(x3-x4)))
-    im1=readImage('./result_line.jpg')
-    im2=readImage('./result2_line.jpg')
+    im1=readImage('./result/result1_line.jpg')
+    im2=readImage('./result/result2_line.jpg')
     h1,w1=im1.shape[:2]
     h2,w2=im2.shape[:2]
     print("shape im1:",im1.shape[:2],"shape im2:",im2.shape[:2])

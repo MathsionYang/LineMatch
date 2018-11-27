@@ -1,6 +1,7 @@
-import os.path,os
-import re
+# -*- coding:utf-8 -*-
+import os.path
 
+''' rename picture files '''
 pictures_dir=os.path.join(os.path.curdir,"pictures")
 pictures_list=os.listdir(pictures_dir)
 i=0
