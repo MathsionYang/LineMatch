@@ -15,7 +15,7 @@ def line_detect_possible(image,minLength=60,maxGap=5):
     lines = cv.HoughLinesP(edges, 1, np.pi / 180, 60, minLineLength=minLength, maxLineGap=maxGap)
     for line in lines:
         x1, y1, x2, y2 = line[0]
-        cv.line(image, (x1, y1), (x2, y2), (0, 255,0), 1)
+        cv.line(image, (x1, y1), (x2, y2), (172, 255,0), 1)
     return image,lines
 def oncallback1(x):
     image1 = readImage('./result/1_processed_black_less.jpg')

@@ -14,7 +14,6 @@ for line in lines:
     dstpoints.append([x4,y4])
 print(srcpoints)
 print(dstpoints)
-
 from createImage import readImage
 im1=readImage("./result/1_processed_black_less.jpg")
 im2=readImage('./result/7_processed_black_less.jpg')
@@ -23,6 +22,6 @@ H,mask=cv2.findHomography(np.array(srcpoints),np.array(dstpoints),
 
 wrap = cv2.warpPerspective(im1, H, (im2.shape[1], im2.shape[0]))
 #wrap[0:im2.shape[0], 0:im2.shape[1]] = im1
-#im3=cv2.addWeighted(wrap,0.5,im2,0.5,0)
-imshow(wrap)
+im3=cv2.addWeighted(wrap,0.5,im2,0.5,0)
+imshow(im3)
 show()

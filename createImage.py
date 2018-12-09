@@ -35,8 +35,10 @@ def oneColor(im,color):
                 if im[i,j][k]!=255:
                     imgcopy[i,j]=color
                     break
+    '''
     imshow(imgcopy)
     show()
+    '''
     return imgcopy
 
 def lessBalckPoints(im, point, size_width=3, size_height=3, r=0.5):
@@ -71,8 +73,8 @@ def process(im, size=(3, 3), r=0.5):
         lessBalckPoints(im, (size_height * h_t, j * size_width), size_width, height - h_t * size_height, r)
     lessBalckPoints(im, (size_height * h_t, size_width * w_t), width - size_width * w_t, height - h_t * size_height, r)
 
-    imshow(im)
-    show()
+    #imshow(im)
+    #show()
     return im
 
 
@@ -100,8 +102,8 @@ if __name__ == '__main__':
     im=readImage('./pictures/7_processed.png')
     black=oneColor(im,(0,0,0))
     imsave('./result/7_processed_black.jpg',black)
-'''
-    '''
+
+
     im = readImage('./pictures/1_processed.png')
     black = oneColor(im, (0, 0, 0))
     imsave('./result/1_processed_black.jpg', black)
@@ -120,7 +122,7 @@ if __name__ == '__main__':
     '''
 
     im = readImage("./result/7_processed_black.jpg")
-    processed = process(im, size=(7, 7), r=0.5)
+    processed = process(im, size=(7, 7), r=0.4)
     imsave("./result/7_processed_black_less.jpg", processed)
 
     '''
