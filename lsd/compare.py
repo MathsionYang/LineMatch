@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 import os
 import math
 import cv2

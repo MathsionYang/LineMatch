@@ -1,4 +1,5 @@
-# -*- coding:utf-8 -*-
+#-*-coding:utf-8-*-
+#@author:lijinxi
 import os.path
 
 ''' rename picture files '''

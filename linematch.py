@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 from PIL import Image
 from pylab import *
 import math

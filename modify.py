@@ -1,3 +1,6 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
+'''修正一些结果'''
 from compare import readData
 import math
 from createImage import readImage

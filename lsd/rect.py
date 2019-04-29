@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 from pylab import *
 import cv2
 from PIL import Image

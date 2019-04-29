@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Date    : 2015-12-19 02:09:53
-# @Author  : Gefu Tang (tanggefu@gmail.com)
-# @Link    : https://github.com/primetang/pylsd
-# @Version : 0.0.1
-
+#-*-coding:utf-8-*-
+#@author:lijinxi
 from lsd2 import lsd
 import cv2
 import numpy as np

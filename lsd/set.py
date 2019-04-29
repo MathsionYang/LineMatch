@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 import os
 from lsd2 import lsd
 import cv2

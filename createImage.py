@@ -1,5 +1,5 @@
-# -*- coding:utf-8 -*-
-
+#-*-coding:utf-8-*-
+#@author:lijinxi
 ''' less black points ,erode or dilation '''
 import cv2
 from pylab import *

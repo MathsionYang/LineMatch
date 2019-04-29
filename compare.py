@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 def readData(filename):
     i=0
     linelist=[]

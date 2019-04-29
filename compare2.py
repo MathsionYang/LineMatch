@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 from compare import readData
 import numpy as np
 import cv2

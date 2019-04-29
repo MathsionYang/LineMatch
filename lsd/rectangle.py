@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 import math
 lines=[]
 with open('conpoints.txt','r')  as f:

@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 def  readgraph(file):
     graph={}
     with open(file,'r') as f:

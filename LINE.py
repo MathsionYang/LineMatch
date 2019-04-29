@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 #直线检测
 #使用霍夫直线变换做直线检测，前提条件：边缘检测已经完成
 import cv2 as cv

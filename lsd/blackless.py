@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+#@author:lijinxi
 from createImage import *
 import os
 #print(os.listdir("../pictures"))
